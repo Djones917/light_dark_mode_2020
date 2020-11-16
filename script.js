@@ -2,7 +2,11 @@ const toggleSwitch = document.querySelector('input[type="checkbox"]');
 
 // Swith Theme Dynamically
 function switchTheme(e) {
-   console.log(e);
+   if (e.target.checked) {
+       document.documentElement.setAttribute('data-theme', 'dark');
+   } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+   }
 }
 
 // Event Listener
